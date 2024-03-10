@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*O root é usado para definir uma classe de variável global, ou seja, que será utilizada em todo o projeto e em diferentes locais, sem variações de cores*/
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #2592BA;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+/*comando para incluir todo o código*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100vh;  propriedade para todo o corpo da página definido como padrão 100vh, ou seja 100% da tela do navegador acessado, quando não há muitos elementos no body, atingindo um valo x e quando inpesionado ultrapassar o body, pode ser removido o heigth*/
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+}
+
+/*o valor quando é colocado em porcentagem é para não ficar fixado, pois ao abrir em outro aparelho ele vai pegar, por exemplo 2% do total da tela e com pixel fica o valor fixado*/
+.cabecalho {
+    padding: 2% 0% 0% 15%
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    gap: 82px;
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+/*comando para criar uma classe, nesse caso foi criado por vão ser usados dois strong de cores diferentes*/
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.especialidade-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;   /*display será o pai, antes do justificar o conteúdo c/ justifycontent */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/*O width de 50% é em relação ao valor ca classe pai que nesse caso é a section*/
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600px;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+/*O hover é utilizado para alterar o botão quando é passado o mouse em cima dele*/
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover)
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+}
+
+
+
+
